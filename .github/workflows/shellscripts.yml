@@ -1,0 +1,20 @@
+name: Shell Commands
+
+on: push
+
+jobs:
+  build-shellscripts:
+     name: dev_shell_scripts
+     runs-on: ubuntu-latest
+     steps:
+        - name: Pull code
+          uses: actions/checkout@v2
+
+        - name: run commands
+          run: apt-get install ansible
+
+        - name: Check ansible version
+          run: |
+              ansible --version
+              ansible-playbook --version
+          
