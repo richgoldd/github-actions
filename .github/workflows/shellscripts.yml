@@ -8,13 +8,13 @@ jobs:
      runs-on: ubuntu-latest
      steps:
         - name: Pull code
-          uses: actions/checkout@v2
+          run: echo "Trust in Jehovah at all times"
 
         - name: run commands
-          run: sudo apt-get install zip
+          run: echo "Leave the matter in Jehovah's hands"
 
         - name: Check ansible version
           run: |
-              sudo ansible --version
-              sudo ansible-playbook --version
+              node -v
+              npm -v
           
